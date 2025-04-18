@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artelio Galerie</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
+    header { background: #000; color: #fff; padding: 1.5em; text-align: center; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; padding: 1em; }
+    .gallery img { width: 100%; border-radius: 10px; }
+    footer { background: #000; color: #fff; text-align: center; padding: 1em; margin-top: 2em; }
+    .lang-toggle { position: fixed; top: 10px; right: 10px; z-index: 1000; }
+    button { margin: 0 5px; padding: 6px 10px; border: none; border-radius: 6px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="headline">Willkommen bei Artelio</h1>
+    <p id="subtext">Entdecke moderne Kunstwerke – digital und physisch</p>
+  </header>
+
+  <div class="lang-toggle">
+    <button onclick="setLang('de')">Deutsch</button>
+    <button onclick="setLang('en')">English</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://via.placeholder.com/400x300?text=Artwork+1" alt="Artwork 1">
+    <img src="https://via.placeholder.com/400x300?text=Artwork+2" alt="Artwork 2">
+    <img src="https://via.placeholder.com/400x300?text=Artwork+3" alt="Artwork 3">
+  </div>
+
+  <footer>
+    <p id="footer-text">&copy; 2025 Artelio. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      if (lang === 'en') {
+        document.getElementById("headline").innerText = "Welcome to Artelio";
+        document.getElementById("subtext").innerText = "Discover modern artworks – digital and physical";
+        document.getElementById("footer-text").innerText = "© 2025 Artelio. All rights reserved.";
+      } else {
+        document.getElementById("headline").innerText = "Willkommen bei Artelio";
+        document.getElementById("subtext").innerText = "Entdecke moderne Kunstwerke – digital und physisch";
+        document.getElementById("footer-text").innerText = "© 2025 Artelio. Alle Rechte vorbehalten.";
+      }
+    }
+  </script>
+</body>
+</html>
