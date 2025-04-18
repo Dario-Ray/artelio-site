@@ -1,111 +1,115 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html><html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Artelio – Digitale Kunst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artelio – Einzigartige digitale und physische Kunstwerke kaufen" />
+  <meta name="keywords" content="Kunst, digitale Kunst, Gemälde, Kunstwerke kaufen, Galerie" />
+  <meta name="author" content="Artelio" />
+  <title>Artelio – Digitale Kunstwerke kaufen</title>
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #fff;
-      color: #333;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-    .art-item {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #f9f9f9;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .art-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .art-info {
-      padding: 1rem;
-    }
-    .art-info h2 {
-      font-size: 1.2rem;
-      margin: 0 0 0.5rem;
-    }
-    .art-info p {
-      margin: 0.25rem 0;
-    }
-    .buy-btn {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: #222;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .buy-btn:hover {
-      background: #444;
-    }
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    header, footer { background: #222; color: white; padding: 1rem; text-align: center; position: relative; }
+    nav a { margin: 0 1rem; color: white; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .language-switch { position: absolute; top: 1rem; right: 1rem; }
+    .logo { font-size: 1.8rem; font-weight: bold; color: #ff4081; }
+    .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; padding: 2rem; }
+    .card { background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 1rem; text-align: center; }
+    img { max-width: 100%; border-radius: 12px; }
+    .price { font-weight: bold; margin: 0.5rem 0; }
+    button, input, textarea { padding: 0.5rem; margin-top: 0.5rem; border-radius: 8px; border: 1px solid #ccc; width: 100%; }
+    section { padding: 2rem; }
+    .social-media { margin-top: 1rem; }
+    .social-media a { color: white; text-decoration: none; margin: 0 0.5rem; font-size: 1.2rem; }
   </style>
+  <script>
+    function switchLanguage(lang) {
+      const de = document.querySelectorAll('[lang="de"]');
+      const en = document.querySelectorAll('[lang="en"]');
+      de.forEach(el => el.style.display = lang === 'de' ? 'block' : 'none');
+      en.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+    }
+  </script>
 </head>
-<body>
+<body onload="switchLanguage('de')">
+  <div class="language-switch">
+    <button onclick="switchLanguage('de')">Deutsch</button>
+    <button onclick="switchLanguage('en')">English</button>
+  </div>
   <header>
-    <h1>Artelio – Digitale Kunst</h1>
-    <p>Exklusive Werke von Dario Ray – 19 € als digitaler Download</p>
-  </header>
-  <section class="gallery">
-
-    <div class="art-item">
-      <img src="https://drive.google.com/uc?export=view&id=18uJrXzygwEgxSbDA_lejv9LnnddPhMpb" alt="Waldlicht">
-      <div class="art-info">
-        <h2>Waldlicht</h2>
-        <p>Digitale Datei – 19 €</p>
-        <a class="buy-btn" href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Waldlicht&body=Hallo,%20ich%20möchte%20das%20digitale%20Kunstwerk%20'Waldlicht'%20für%2019€%20kaufen.%20Bitte%20sende%20mir%20die%20Zahlungsinformationen.">Jetzt kaufen</a>
+    <div class="logo">Artelio</div>
+    <nav>
+      <a href="#gallery" lang="de">Galerie</a>
+      <a href="#contact" lang="de">Kontakt</a>
+      <a href="#legal" lang="de">Rechtliches</a>
+      <a href="#gallery" lang="en">Gallery</a>
+      <a href="#contact" lang="en">Contact</a>
+      <a href="#legal" lang="en">Legal</a>
+    </nav>
+    <div class="social-media">
+      <a href="https://www.youtube.com/@Artelio%E4%BA%97" target="_blank">YouTube</a>
+    </div>
+  </header>  <section id="gallery">
+    <h2 lang="de">Kunstwerke</h2>
+    <h2 lang="en">Artworks</h2>
+    <div class="container">
+      <div class="card">
+        <img src="https://drive.google.com/uc?export=view&id=18uJrXzygwEgxSbDA_lejv9LnnddPhMpb" alt="Artwork 1" />
+        <div class="price">15 €</div>
+        <a href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Artwork%201" target="_blank"><button lang="de">Kaufen per E-Mail</button><button lang="en">Buy via Email</button></a>
+      </div>
+      <div class="card">
+        <img src="https://drive.google.com/uc?export=view&id=18y4A-Fk9CrdDzPe_wPhMuzSgoiTD35_s" alt="Artwork 2" />
+        <div class="price">18 €</div>
+        <a href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Artwork%202" target="_blank"><button lang="de">Kaufen per E-Mail</button><button lang="en">Buy via Email</button></a>
+      </div>
+      <div class="card">
+        <img src="https://drive.google.com/uc?export=view&id=18twTcAm2rDfbKU5rv3HQ7Dd0UUvol25K" alt="Artwork 3" />
+        <div class="price">20 €</div>
+        <a href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Artwork%203" target="_blank"><button lang="de">Kaufen per E-Mail</button><button lang="en">Buy via Email</button></a>
+      </div>
+      <div class="card">
+        <img src="https://drive.google.com/uc?export=view&id=18wMOGzON1nTgkWT4HmAJxOGc3PmtGyDm" alt="Artwork 4" />
+        <div class="price">22 €</div>
+        <a href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Artwork%204" target="_blank"><button lang="de">Kaufen per E-Mail</button><button lang="en">Buy via Email</button></a>
       </div>
     </div>
-
-    <div class="art-item">
-      <img src="https://drive.google.com/uc?export=view&id=18y4A-Fk9CrdDzPe_wPhMuzSgoiTD35_s" alt="Dämmerung">
-      <div class="art-info">
-        <h2>Dämmerung</h2>
-        <p>Digitale Datei – 19 €</p>
-        <a class="buy-btn" href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Dämmerung&body=Hallo,%20ich%20möchte%20das%20digitale%20Kunstwerk%20'Dämmerung'%20für%2019€%20kaufen.%20Bitte%20sende%20mir%20die%20Zahlungsinformationen.">Jetzt kaufen</a>
-      </div>
-    </div>
-
-    <div class="art-item">
-      <img src="https://drive.google.com/uc?export=view&id=18twTcAm2rDfbKU5rv3HQ7Dd0UUvol25K" alt="Stadtblick">
-      <div class="art-info">
-        <h2>Stadtblick</h2>
-        <p>Digitale Datei – 19 €</p>
-        <a class="buy-btn" href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Stadtblick&body=Hallo,%20ich%20möchte%20das%20digitale%20Kunstwerk%20'Stadtblick'%20für%2019€%20kaufen.%20Bitte%20sende%20mir%20die%20Zahlungsinformationen.">Jetzt kaufen</a>
-      </div>
-    </div>
-
-    <div class="art-item">
-      <img src="https://drive.google.com/uc?export=view&id=18wMOGzON1nTgkWT4HmAJxOGc3PmtGyDm" alt="Spiegelung">
-      <div class="art-info">
-        <h2>Spiegelung</h2>
-        <p>Digitale Datei – 19 €</p>
-        <a class="buy-btn" href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Spiegelung&body=Hallo,%20ich%20möchte%20das%20digitale%20Kunstwerk%20'Spiegelung'%20für%2019€%20kaufen.%20Bitte%20sende%20mir%20die%20Zahlungsinformationen.">Jetzt kaufen</a>
-      </div>
-    </div>
-
-  </section>
+  </section>  <section id="contact">
+    <h2 lang="de">Kontaktformular</h2>
+    <h2 lang="en">Contact Form</h2>
+    <form action="mailto:Rjkwnn121@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="E-Mail" required />
+      <textarea name="message" placeholder="Nachricht" required></textarea>
+      <button type="submit" lang="de">Absenden</button>
+      <button type="submit" lang="en">Send</button>
+    </form>
+  </section>  <section id="legal">
+    <h2 lang="de">Rechtliches</h2>
+    <h2 lang="en">Legal</h2>
+    <p lang="de">
+      <strong>Impressum:</strong><br>
+      Betreiber: Dein Name<br>
+      E-Mail: Rjkwnn121@gmail.com<br>
+      Standort: Deutschland
+    </p>
+    <p lang="en">
+      <strong>Imprint:</strong><br>
+      Owner: Your Name<br>
+      Email: Rjkwnn121@gmail.com<br>
+      Location: Germany
+    </p>
+    <p lang="de">
+      <strong>Datenschutzerklärung:</strong><br>
+      Diese Website speichert keine personenbezogenen Daten und verwendet keine Cookies.
+    </p>
+    <p lang="en">
+      <strong>Privacy Policy:</strong><br>
+      This website does not store personal data and uses no cookies.
+    </p>
+  </section>  <footer>
+    <p lang="de">&copy; 2025 Artelio – Alle Rechte vorbehalten</p>
+    <p lang="en">&copy; 2025 Artelio – All rights reserved</p>
+  </footer>
 </body>
 </html>
