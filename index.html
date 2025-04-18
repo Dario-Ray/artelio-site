@@ -1,96 +1,111 @@
-<!DOCTYPE html><html lang="de">
+<!DOCTYPE html>
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artelio - Galerie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artelio – Digitale Kunst</title>
   <style>
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #fdfdfd;
+      font-family: sans-serif;
+      background: #fff;
+      color: #333;
     }
     header {
       background: #111;
       color: #fff;
-      padding: 1em;
+      padding: 1rem;
       text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
     }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1em;
-      padding: 2em;
+      gap: 1rem;
+      padding: 2rem;
     }
-    .artwork {
-      background: white;
+    .art-item {
       border: 1px solid #ddd;
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
+      background: #f9f9f9;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-align: center;
-      padding-bottom: 1em;
     }
-    .artwork img {
-      max-width: 100%;
+    .art-item img {
+      width: 100%;
       height: auto;
+      display: block;
     }
-    .artwork h3 {
-      margin: 0.5em 0 0.2em;
+    .art-info {
+      padding: 1rem;
     }
-    .artwork p {
-      margin: 0.2em 0;
+    .art-info h2 {
+      font-size: 1.2rem;
+      margin: 0 0 0.5rem;
     }
-    .buy-button {
+    .art-info p {
+      margin: 0.25rem 0;
+    }
+    .buy-btn {
       display: inline-block;
-      margin-top: 0.5em;
-      padding: 0.5em 1em;
-      background: #111;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #222;
       color: white;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 5px;
     }
-    footer {
-      background: #eee;
-      text-align: center;
-      padding: 1em;
-      font-size: 0.9em;
+    .buy-btn:hover {
+      background: #444;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Artelio Galerie</h1>
-    <p>Moderne Kunstwerke von Dario – digital & physisch erhältlich</p>
-  </header>  <section class="gallery">
-    <div class="artwork">
-      <img src="https://drive.google.com/uc?export=view&id=18uJrXzygwEgxSbDA_lejv9LnnddPhMpb" alt="Waldlicht" />
-      <h3>Waldlicht</h3>
-      <p>Physisch – 40€</p>
-      <a class="buy-button" href="mailto:bestellung@artelio.de?subject=Bestellung%20Waldlicht">Jetzt kaufen</a>
-    </div><div class="artwork">
-  <img src="https://drive.google.com/uc?export=view&id=18y4A-Fk9CrdDzPe_wPhMuzSgoiTD35_s" alt="Kosmos" />
-  <h3>Kosmos</h3>
-  <p>Digital – 25€</p>
-  <a class="buy-button" href="mailto:bestellung@artelio.de?subject=Bestellung%20Kosmos">Jetzt kaufen</a>
-</div>
+    <h1>Artelio – Digitale Kunst</h1>
+    <p>Exklusive Werke von Dario Ray – 19 € als digitaler Download</p>
+  </header>
+  <section class="gallery">
 
-<div class="artwork">
-  <img src="https://drive.google.com/uc?export=view&id=18twTcAm2rDfbKU5rv3HQ7Dd0UUvol25K" alt="Freiheit" />
-  <h3>Freiheit</h3>
-  <p>Digital & Physisch – 60€</p>
-  <a class="buy-button" href="mailto:bestellung@artelio.de?subject=Bestellung%20Freiheit">Jetzt kaufen</a>
-</div>
+    <div class="art-item">
+      <img src="https://drive.google.com/uc?export=view&id=18uJrXzygwEgxSbDA_lejv9LnnddPhMpb" alt="Waldlicht">
+      <div class="art-info">
+        <h2>Waldlicht</h2>
+        <p>Digitale Datei – 19 €</p>
+        <a class="buy-btn" href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Waldlicht&body=Hallo,%20ich%20möchte%20das%20digitale%20Kunstwerk%20'Waldlicht'%20für%2019€%20kaufen.%20Bitte%20sende%20mir%20die%20Zahlungsinformationen.">Jetzt kaufen</a>
+      </div>
+    </div>
 
-<div class="artwork">
-  <img src="https://drive.google.com/uc?export=view&id=18wMOGzON1nTgkWT4HmAJxOGc3PmtGyDm" alt="Ruhige See" />
-  <h3>Ruhige See</h3>
-  <p>Digital – 30€</p>
-  <a class="buy-button" href="mailto:bestellung@artelio.de?subject=Bestellung%20Ruhige%20See">Jetzt kaufen</a>
-</div>
+    <div class="art-item">
+      <img src="https://drive.google.com/uc?export=view&id=18y4A-Fk9CrdDzPe_wPhMuzSgoiTD35_s" alt="Dämmerung">
+      <div class="art-info">
+        <h2>Dämmerung</h2>
+        <p>Digitale Datei – 19 €</p>
+        <a class="buy-btn" href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20D%C3%A4mmerung&body=Hallo,%20ich%20möchte%20das%20digitale%20Kunstwerk%20'Dämmerung'%20für%2019€%20kaufen.%20Bitte%20sende%20mir%20die%20Zahlungsinformationen.">Jetzt kaufen</a>
+      </div>
+    </div>
 
-  </section>  <footer>
-    &copy; 2025 Artelio – Alle Rechte vorbehalten.
-  </footer>
+    <div class="art-item">
+      <img src="https://drive.google.com/uc?export=view&id=18twTcAm2rDfbKU5rv3HQ7Dd0UUvol25K" alt="Stadtblick">
+      <div class="art-info">
+        <h2>Stadtblick</h2>
+        <p>Digitale Datei – 19 €</p>
+        <a class="buy-btn" href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Stadtblick&body=Hallo,%20ich%20möchte%20das%20digitale%20Kunstwerk%20'Stadtblick'%20für%2019€%20kaufen.%20Bitte%20sende%20mir%20die%20Zahlungsinformationen.">Jetzt kaufen</a>
+      </div>
+    </div>
+
+    <div class="art-item">
+      <img src="https://drive.google.com/uc?export=view&id=18wMOGzON1nTgkWT4HmAJxOGc3PmtGyDm" alt="Spiegelung">
+      <div class="art-info">
+        <h2>Spiegelung</h2>
+        <p>Digitale Datei – 19 €</p>
+        <a class="buy-btn" href="mailto:Rjkwnn121@gmail.com?subject=Kauf%20Spiegelung&body=Hallo,%20ich%20möchte%20das%20digitale%20Kunstwerk%20'Spiegelung'%20für%2019€%20kaufen.%20Bitte%20sende%20mir%20die%20Zahlungsinformationen.">Jetzt kaufen</a>
+      </div>
+    </div>
+
+  </section>
 </body>
 </html>
