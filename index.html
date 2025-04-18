@@ -1,52 +1,96 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html><html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Artelio Galerie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artelio - Galerie</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
-    header { background: #000; color: #fff; padding: 1.5em; text-align: center; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; padding: 1em; }
-    .gallery img { width: 100%; border-radius: 10px; }
-    footer { background: #000; color: #fff; text-align: center; padding: 1em; margin-top: 2em; }
-    .lang-toggle { position: fixed; top: 10px; right: 10px; z-index: 1000; }
-    button { margin: 0 5px; padding: 6px 10px; border: none; border-radius: 6px; cursor: pointer; }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1em;
+      padding: 2em;
+    }
+    .artwork {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      padding-bottom: 1em;
+    }
+    .artwork img {
+      max-width: 100%;
+      height: auto;
+    }
+    .artwork h3 {
+      margin: 0.5em 0 0.2em;
+    }
+    .artwork p {
+      margin: 0.2em 0;
+    }
+    .buy-button {
+      display: inline-block;
+      margin-top: 0.5em;
+      padding: 0.5em 1em;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1 id="headline">Willkommen bei Artelio</h1>
-    <p id="subtext">Entdecke moderne Kunstwerke – digital und physisch</p>
-  </header>
+    <h1>Artelio Galerie</h1>
+    <p>Moderne Kunstwerke von Dario – digital & physisch erhältlich</p>
+  </header>  <section class="gallery">
+    <div class="artwork">
+      <img src="https://drive.google.com/uc?export=view&id=18uJrXzygwEgxSbDA_lejv9LnnddPhMpb" alt="Waldlicht" />
+      <h3>Waldlicht</h3>
+      <p>Physisch – 40€</p>
+      <a class="buy-button" href="mailto:bestellung@artelio.de?subject=Bestellung%20Waldlicht">Jetzt kaufen</a>
+    </div><div class="artwork">
+  <img src="https://drive.google.com/uc?export=view&id=18y4A-Fk9CrdDzPe_wPhMuzSgoiTD35_s" alt="Kosmos" />
+  <h3>Kosmos</h3>
+  <p>Digital – 25€</p>
+  <a class="buy-button" href="mailto:bestellung@artelio.de?subject=Bestellung%20Kosmos">Jetzt kaufen</a>
+</div>
 
-  <div class="lang-toggle">
-    <button onclick="setLang('de')">Deutsch</button>
-    <button onclick="setLang('en')">English</button>
-  </div>
+<div class="artwork">
+  <img src="https://drive.google.com/uc?export=view&id=18twTcAm2rDfbKU5rv3HQ7Dd0UUvol25K" alt="Freiheit" />
+  <h3>Freiheit</h3>
+  <p>Digital & Physisch – 60€</p>
+  <a class="buy-button" href="mailto:bestellung@artelio.de?subject=Bestellung%20Freiheit">Jetzt kaufen</a>
+</div>
 
-  <div class="gallery">
-    <img src="https://via.placeholder.com/400x300?text=Artwork+1" alt="Artwork 1">
-    <img src="https://via.placeholder.com/400x300?text=Artwork+2" alt="Artwork 2">
-    <img src="https://via.placeholder.com/400x300?text=Artwork+3" alt="Artwork 3">
-  </div>
+<div class="artwork">
+  <img src="https://drive.google.com/uc?export=view&id=18wMOGzON1nTgkWT4HmAJxOGc3PmtGyDm" alt="Ruhige See" />
+  <h3>Ruhige See</h3>
+  <p>Digital – 30€</p>
+  <a class="buy-button" href="mailto:bestellung@artelio.de?subject=Bestellung%20Ruhige%20See">Jetzt kaufen</a>
+</div>
 
-  <footer>
-    <p id="footer-text">&copy; 2025 Artelio. Alle Rechte vorbehalten.</p>
+  </section>  <footer>
+    &copy; 2025 Artelio – Alle Rechte vorbehalten.
   </footer>
-
-  <script>
-    function setLang(lang) {
-      if (lang === 'en') {
-        document.getElementById("headline").innerText = "Welcome to Artelio";
-        document.getElementById("subtext").innerText = "Discover modern artworks – digital and physical";
-        document.getElementById("footer-text").innerText = "© 2025 Artelio. All rights reserved.";
-      } else {
-        document.getElementById("headline").innerText = "Willkommen bei Artelio";
-        document.getElementById("subtext").innerText = "Entdecke moderne Kunstwerke – digital und physisch";
-        document.getElementById("footer-text").innerText = "© 2025 Artelio. Alle Rechte vorbehalten.";
-      }
-    }
-  </script>
 </body>
 </html>
