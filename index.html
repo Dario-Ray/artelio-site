@@ -6,15 +6,34 @@
   <meta name="author" content="Dario-Ray" />
   <title>Artelio – Digital Gallery</title>
   <link rel="stylesheet" href="styles.css" />
-</head><body style="margin:0; background: #000 url('https://images.unsplash.com/photo-1581320548499-947b592b412b?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed; background-size: cover; color: white; font-family: 'Segoe UI', sans-serif;">
-  <video autoplay muted loop playsinline style="width: 100%; height: auto;">
-    <source src="https://cdn.pixabay.com/video/2023/04/10/161661-819228122_large.mp4" type="video/mp4" />
-  </video>  <header style="position: absolute; top: 0; left: 0; width: 100%; padding: 1rem; background: rgba(0,0,0,0.6); display: flex; justify-content: space-between; align-items: center;">
+  <style>
+    body {
+      margin: 0;
+      background: #000 url('https://images.unsplash.com/photo-1581320548499-947b592b412b?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header, footer {
+      background: rgba(0,0,0,0.6);
+      padding: 1rem;
+    }
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head><body>
+  <header style="display: flex; justify-content: space-between; align-items: center;">
     <h1 style="margin: 0; font-size: 1.5rem;">Artelio</h1>
     <nav>
-      <a href="#gallery" style="color: white; margin-right: 1rem;">Gallery</a>
-      <a href="#contact" style="color: white; margin-right: 1rem;">Contact</a>
-      <a href="/impressum.html" style="color: white;">Imprint</a>
+      <a href="#gallery" style="margin-right: 1rem;">Gallery</a>
+      <a href="#contact" style="margin-right: 1rem;">Contact</a>
+      <a href="#about" style="margin-right: 1rem;">About</a>
+      <a href="#terms">Terms</a>
     </nav>
   </header>  <main style="padding: 4rem 2rem;">
     <section id="gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
@@ -22,28 +41,28 @@
         <img src="https://drive.google.com/uc?id=18uJrXzygwEgxSbDA_lejv9LnnddPhMpb" alt="Artwork 1" style="width: 100%; border-radius: 1rem;" />
         <h3>Artwork 1</h3>
         <p>Price: €10</p>
-        <a href="mailto:Rjkwnn121@gmail.com?subject=Purchase%20Artwork%201" style="color: #0ff;">Buy via Email</a>
+        <a href="mailto:Rjkwnn121@gmail.com?subject=Purchase%20Artwork%201">Buy via Email</a>
       </div>
       <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 1rem;">
         <img src="https://drive.google.com/uc?id=18y4A-Fk9CrdDzPe_wPhMuzSgoiTD35_s" alt="Artwork 2" style="width: 100%; border-radius: 1rem;" />
         <h3>Artwork 2</h3>
         <p>Price: €12</p>
-        <a href="mailto:Rjkwnn121@gmail.com?subject=Purchase%20Artwork%202" style="color: #0ff;">Buy via Email</a>
+        <a href="mailto:Rjkwnn121@gmail.com?subject=Purchase%20Artwork%202">Buy via Email</a>
       </div>
       <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 1rem;">
         <img src="https://drive.google.com/uc?id=18twTcAm2rDfbKU5rv3HQ7Dd0UUvol25K" alt="Artwork 3" style="width: 100%; border-radius: 1rem;" />
         <h3>Artwork 3</h3>
         <p>Price: €9</p>
-        <a href="mailto:Rjkwnn121@gmail.com?subject=Purchase%20Artwork%203" style="color: #0ff;">Buy via Email</a>
+        <a href="mailto:Rjkwnn121@gmail.com?subject=Purchase%20Artwork%203">Buy via Email</a>
       </div>
       <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 1rem;">
         <img src="https://drive.google.com/uc?id=18wMOGzON1nTgkWT4HmAJxOGc3PmtGyDm" alt="Artwork 4" style="width: 100%; border-radius: 1rem;" />
         <h3>Artwork 4</h3>
         <p>Price: €15</p>
-        <a href="mailto:Rjkwnn121@gmail.com?subject=Purchase%20Artwork%204" style="color: #0ff;">Buy via Email</a>
+        <a href="mailto:Rjkwnn121@gmail.com?subject=Purchase%20Artwork%204">Buy via Email</a>
       </div>
     </section><section id="contact" style="margin-top: 4rem;">
-  <h2>Contact Form</h2>
+  <h2>Contact</h2>
   <form action="mailto:Rjkwnn121@gmail.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 1rem;">
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
@@ -52,8 +71,19 @@
   </form>
 </section>
 
-  </main>  <footer style="background: rgba(0,0,0,0.6); padding: 1rem; text-align: center;">
+<section id="about" style="margin-top: 4rem;">
+  <h2>About Artelio</h2>
+  <p>Artelio is an independent art brand by Dario-Ray, focused on delivering high-quality digital artwork that speaks emotion and depth. All pieces are created with passion and are available for digital download. Every artwork tells a story.</p>
+</section>
+
+<section id="terms" style="margin-top: 4rem;">
+  <h2>Terms and Privacy</h2>
+  <p>All artworks are owned by Dario-Ray and may not be copied or distributed without permission. Purchases are for personal use only. For commercial use, please contact us directly.</p>
+  <p>Email data submitted through the contact form will only be used to process your request. We do not share your information with third parties.</p>
+</section>
+
+  </main>  <footer style="text-align: center;">
     <p>© 2025 Artelio | Created by Dario-Ray</p>
-    <a href="https://www.youtube.com/@Artelio%E4%BA%97" target="_blank" style="color: #f44;">YouTube</a>
+    <a href="https://www.youtube.com/@Artelio%E4%BA%97" target="_blank">YouTube</a>
   </footer>
 </body></html>
