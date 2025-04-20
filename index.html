@@ -1,1 +1,159 @@
-Artelio body { margin: 0; font-family: 'Arial', sans-serif; background-image: url('Screenshot_20250420_111514_Samsung Internet.jpg'); background-size: cover; background-position: center; background-attachment: fixed; color: white; } header { padding: 2rem; text-align: center; } header h1 { font-size: 3rem; } nav { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; } nav a { color: white; text-decoration: none; font-weight: bold; } .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; padding: 2rem; } .art-item { background-color: rgba(0, 0, 0, 0.5); padding: 1rem; border-radius: 1rem; text-align: center; } .art-item img { width: 100%; border-radius: 0.5rem; } .price { font-size: 1.2rem; margin-top: 0.5rem; } footer { text-align: center; padding: 2rem; background-color: rgba(0, 0, 0, 0.8); } footer a { color: white; text-decoration: underline; } </style> Artelio Gallery About Contact Terms <section id="gallery" class="gallery"> <div class="art-item"> <img src="92238b9f07035203776bca031ea3cbfd.jpg" alt="Art 1"> <div class="price">€9.99</div> </div> <div class="art-item"> <img src="b3994ca6fc715e11b5401818f9296087.jpg" alt="Art 2"> <div class="price">€12.99</div> </div> <div class="art-item"> <img src="ed1e9e46d74a1bd5db08b9058c9e10fa.jpg" alt="Art 3"> <div class="price">€7.99</div> </div> </section> <section id="about" style="padding: 2rem; text-align: center;"> <h2>About</h2> <p>Artelio is a digital art platform by Dario-Ray. All works are original and can be purchased digitally via email.</p> </section> <section id="contact" style="padding: 2rem; text-align: center;"> <h2>Contact</h2> <p>For orders or questions, email us at <a href="mailto:Rjkwnn121@gmail.com">Rjkwnn121@gmail.com</a></p> </section> <section id="terms" style="padding: 2rem; text-align: center;"> <h2>Terms & Policies</h2> <p>All artworks are for personal use only. Redistribution or resale is prohibited. Digital delivery only. No refunds after delivery.</p> </section> <footer> <p>&copy; 2025 Artelio. Created by Dario-Ray. <br /> <a href="https://www.youtube.com/@Artelio%E4%BA%97" target="_blank">YouTube</a></p> </footer> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artelio – Digital Art Gallery</title>
+  <meta name="description" content="Buy unique digital artworks by Dario-Ray – cosmic, creative, and original." />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.4);
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #00ffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .art-card {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .art-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .price {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #00ffff;
+    }
+
+    .email-btn {
+      background: #00ffff;
+      color: black;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    section#about {
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.7);
+      margin: 2rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 0.9rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- VIDEO BACKGROUND -->
+  <video autoplay muted loop class="bg-video">
+    <source src="https://cdn.coverr.co/videos/coverr-space-flight-4767/1080p.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="logo">Artelio</div>
+    <h1>Explore Digital Cosmos</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="https://www.youtube.com/@Artelio%E4%BA%97" target="_blank">YouTube</a>
+    </nav>
+  </header>
+
+  <section id="gallery" class="gallery">
+    <div class="art-card">
+      <img src="92238b9f07035203776bca031ea3cbfd.jpg" alt="Artwork 1" />
+      <div class="price">€9.99 – Digital</div>
+      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 1">Buy via Email</a>
+    </div>
+    <div class="art-card">
+      <img src="b3994ca6fc715e11b5401818f9296087.jpg" alt="Artwork 2" />
+      <div class="price">€7.99 – Digital</div>
+      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 2">Buy via Email</a>
+    </div>
+    <div class="art-card">
+      <img src="ed1e9e46d74a1bd5db08b9058c9e10fa.jpg" alt="Artwork 3" />
+      <div class="price">€12.99 – Digital</div>
+      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 3">Buy via Email</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 style="text-align: center;">About Artelio</h2>
+    <p style="max-width: 600px; margin: auto; text-align: center;">
+      Artelio is a digital art gallery by Dario-Ray. Each piece reflects cosmic energy, imagination, and emotion. Digital and unique – just like you.
+    </p>
+  </section>
+
+  <footer>
+    <div>Imprint: Dario-Ray | artelio-site.vercel.app</div>
+    <div>Contact: <a href="mailto:Rjkwnn121@gmail.com">Rjkwnn121@gmail.com</a></div>
+    <div>Privacy Policy & Terms available on request.</div>
+  </footer>
+
+</body>
+</html>
