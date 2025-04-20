@@ -7,12 +7,24 @@
   <meta name="description" content="Buy unique digital artworks by Dario-Ray – cosmic, creative, and original." />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" />
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Orbitron', sans-serif;
       color: white;
-      background: url('https://images.unsplash.com/photo-1604079628041-943f37f88359?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    .bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.4);
     }
 
     header {
@@ -45,7 +57,7 @@
     }
 
     .art-card {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.7);
       border-radius: 15px;
       padding: 1rem;
       text-align: center;
@@ -73,11 +85,17 @@
       margin-top: 10px;
     }
 
+    section#about {
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.7);
+      margin: 2rem;
+      border-radius: 10px;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
-      background: rgba(0, 0, 0, 0.7);
-      margin-top: 2rem;
+      background: rgba(0, 0, 0, 0.8);
       font-size: 0.9rem;
     }
 
@@ -88,6 +106,13 @@
   </style>
 </head>
 <body>
+
+  <!-- VIDEO BACKGROUND -->
+  <video autoplay muted loop class="bg-video">
+    <source src="https://cdn.coverr.co/videos/coverr-space-flight-4767/1080p.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
   <header>
     <div class="logo">Artelio</div>
     <h1>Explore Digital Cosmos</h1>
@@ -117,10 +142,10 @@
     </div>
   </section>
 
-  <section id="about" style="padding: 2rem;">
+  <section id="about">
     <h2 style="text-align: center;">About Artelio</h2>
     <p style="max-width: 600px; margin: auto; text-align: center;">
-      Artelio is a digital art gallery founded by Dario-Ray. Every piece is unique, inspired by space, light, and raw emotion. Browse. Choose. Own a digital cosmos.
+      Artelio is a digital art gallery by Dario-Ray. Each piece reflects cosmic energy, imagination, and emotion. Digital and unique – just like you.
     </p>
   </section>
 
@@ -129,5 +154,6 @@
     <div>Contact: <a href="mailto:Rjkwnn121@gmail.com">Rjkwnn121@gmail.com</a></div>
     <div>Privacy Policy & Terms available on request.</div>
   </footer>
+
 </body>
 </html>
