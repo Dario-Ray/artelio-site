@@ -14,6 +14,7 @@
       font-family: 'Orbitron', sans-serif;
       color: white;
       overflow-x: hidden;
+      background: black;
     }
 
     .bg-video {
@@ -33,15 +34,6 @@
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    nav {
-      margin-top: 1rem;
-    }
-
     nav a {
       color: #00ffff;
       margin: 0 15px;
@@ -57,17 +49,36 @@
     }
 
     .art-card {
+      position: relative;
       background: rgba(0, 0, 0, 0.7);
       border-radius: 15px;
       padding: 1rem;
       text-align: center;
+      user-select: none;
+      pointer-events: auto;
     }
 
     .art-card img {
       width: 100%;
       border-radius: 10px;
       pointer-events: none;
-      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      width: 100%;
+      height: 100%;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
     }
 
     .price {
@@ -87,13 +98,6 @@
       margin-top: 10px;
     }
 
-    section#about {
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.7);
-      margin: 2rem;
-      border-radius: 10px;
-    }
-
     footer {
       text-align: center;
       padding: 2rem;
@@ -101,96 +105,118 @@
       font-size: 0.9rem;
     }
 
-    .logo {
-      font-size: 1.5rem;
-      color: #00ffff;
+    body {
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    body::after {
+      content: "Screenshots are discouraged.";
+      color: red;
+      font-size: 0.8rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 3px 8px;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
     }
   </style>
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'PrintScreen') {
+        alert('Screenshots are discouraged.');
+      }
+    });
+  </script>
 </head>
 <body>
 
-  <!-- VIDEO BACKGROUND -->
-  <video autoplay muted loop class="bg-video">
-    <source src="https://cdn.coverr.co/videos/coverr-space-flight-4767/1080p.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<video autoplay muted loop class="bg-video">
+  <source src="https://cdn.coverr.co/videos/coverr-space-flight-4767/1080p.mp4" type="video/mp4">
+</video>
 
-  <header>
-    <div class="logo">Artelio</div>
-    <h1>Explore Digital Cosmos</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
-      <a href="https://www.youtube.com/@Artelio%E4%BA%97" target="_blank">YouTube</a>
-    </nav>
-  </header>
+<header>
+  <h1>Artelio – Explore Digital Cosmos</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="https://www.youtube.com/@Artelio%E4%BA%97" target="_blank">YouTube</a>
+  </nav>
+</header>
 
-  <section id="gallery" class="gallery">
-    <div class="art-card">
-      <img src="c9f82af133e56e5527fc882248aa8bde.jpg" alt="Artwork 1" />
-      <div class="price">€24.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 1">Buy via Email</a>
-    </div>
-    <div class="art-card">
-      <img src="bdea4f74b9435f3077dcbc296b9eaf8c.jpg" alt="Artwork 2" />
-      <div class="price">€29.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 2">Buy via Email</a>
-    </div>
-    <div class="art-card">
-      <img src="873ddf7b85d5305f675843ce02f2520e.jpg" alt="Artwork 3" />
-      <div class="price">€34.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 3">Buy via Email</a>
-    </div>
-    <div class="art-card">
-      <img src="a4ed943b9cde77d08880eec16551e5f2.jpg" alt="Artwork 4" />
-      <div class="price">€39.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 4">Buy via Email</a>
-    </div>
-    <div class="art-card">
-      <img src="77dfcd69e3267f6347b933cd8d4ee0f0.jpg" alt="Artwork 5" />
-      <div class="price">€49.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 5">Buy via Email</a>
-    </div>
-    <div class="art-card">
-      <img src="fef92a2853552f1cb870fb9e5bea6004.jpg" alt="Artwork 6" />
-      <div class="price">€59.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 6">Buy via Email</a>
-    </div>
-    <div class="art-card">
-      <img src="95963593fb064990c8732b9e5187708a.jpg" alt="Artwork 7" />
-      <div class="price">€69.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 7">Buy via Email</a>
-    </div>
-    <div class="art-card">
-      <img src="825dfd4bad537123f2bef7d8550e312e.jpg" alt="Artwork 8" />
-      <div class="price">€79.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 8">Buy via Email</a>
-    </div>
-    <div class="art-card">
-      <img src="ee721c0986ba589eb27866b340ccdece.jpg" alt="Artwork 9" />
-      <div class="price">€89.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 9">Buy via Email</a>
-    </div>
-    <div class="art-card">
-      <img src="d890716fca6befe50f7517862ba036b5.jpg" alt="Artwork 10" />
-      <div class="price">€99.99 – Digital</div>
-      <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=I want to buy Artwork 10">Buy via Email</a>
-    </div>
-  </section>
+<section id="gallery" class="gallery">
+  <!-- Repeat this block for each artwork -->
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="c9f82af133e56e5527fc882248aa8bde.jpg" alt="Artwork 1" />
+    <div class="price">€24.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 1">Buy via Email</a>
+  </div>
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="bdea4f74b9435f3077dcbc296b9eaf8c.jpg" alt="Artwork 2" />
+    <div class="price">€29.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 2">Buy via Email</a>
+  </div>
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="873ddf7b85d5305f675843ce02f2520e.jpg" alt="Artwork 3" />
+    <div class="price">€34.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 3">Buy via Email</a>
+  </div>
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="a4ed943b9cde77d08880eec16551e5f2.jpg" alt="Artwork 4" />
+    <div class="price">€39.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 4">Buy via Email</a>
+  </div>
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="77dfcd69e3267f6347b933cd8d4ee0f0.jpg" alt="Artwork 5" />
+    <div class="price">€49.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 5">Buy via Email</a>
+  </div>
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="fef92a2853552f1cb870fb9e5bea6004.jpg" alt="Artwork 6" />
+    <div class="price">€59.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 6">Buy via Email</a>
+  </div>
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="95963593fb064990c8732b9e5187708a.jpg" alt="Artwork 7" />
+    <div class="price">€69.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 7">Buy via Email</a>
+  </div>
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="825dfd4bad537123f2bef7d8550e312e.jpg" alt="Artwork 8" />
+    <div class="price">€79.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 8">Buy via Email</a>
+  </div>
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="ee721c0986ba589eb27866b340ccdece.jpg" alt="Artwork 9" />
+    <div class="price">€89.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 9">Buy via Email</a>
+  </div>
+  <div class="art-card">
+    <div class="overlay">Artelio ©</div>
+    <img src="d890716fca6befe50f7517862ba036b5.jpg" alt="Artwork 10" />
+    <div class="price">€99.99 – Digital</div>
+    <a class="email-btn" href="mailto:Rjkwnn121@gmail.com?subject=Buy Artwork 10">Buy via Email</a>
+  </div>
+</section>
 
-  <section id="about">
-    <h2 style="text-align: center;">About Artelio</h2>
-    <p style="max-width: 600px; margin: auto; text-align: center;">
-      Artelio is a digital art gallery by Dario-Ray. Each piece reflects cosmic energy, imagination, and emotion. Digital and unique – just like you.
-    </p>
-  </section>
-
-  <footer>
-    <div>Imprint: Dario-Ray | artelio-site.vercel.app</div>
-    <div>Contact: <a href="mailto:Rjkwnn121@gmail.com">Rjkwnn121@gmail.com</a></div>
-    <div>Privacy Policy & Terms available on request.</div>
-  </footer>
+<footer>
+  <div>Imprint: Dario-Ray | artelio-site.vercel.app</div>
+  <div>Contact: <a href="mailto:Rjkwnn121@gmail.com">Rjkwnn121@gmail.com</a></div>
+  <div>Privacy Policy & Terms available on request.</div>
+</footer>
 
 </body>
 </html>
